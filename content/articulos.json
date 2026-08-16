@@ -1,28 +1,28 @@
 {
   "articulos": [
     {
-      "title": "Inversión pública y eficiencia social en el sur andino: Desafíos para el desarrollo",
+      "title": "Inversión pública y eficiencia social en el sur andino: Desafíos estructurales para el desarrollo",
       "category": "Opinión",
       "date": "2026-08-16T16:00:00.000-05:00",
       "image": "https://images.unsplash.com/photo-1541888946425-d0fbb186156a?w=800&auto=format&fit=crop&q=80",
-      "summary": "Un análisis sobre la necesidad de articular el ciclo de inversión pública con las demandas estructurales de nuestras provincias y distritos.",
-      "body": "El desarrollo económico del sur andino exige una mirada técnica y socialmente comprometida..."
+      "summary": "Un análisis sobre la necesidad de articular el ciclo de inversión pública con el cierre efectivo de brechas sociales en las provincias y distritos de nuestra región.",
+      "body": "El desarrollo socioeconómico del sur andino exige superar la mera ejecución presupuestal para centrarse en la rentabilidad social y la calidad de los proyectos de inversión pública. Es fundamental fortalecer la formulación técnica en los gobiernos locales, priorizando obras de agua potable, conectividad vial y equipamiento productivo que generen un impacto duradero en la calidad de vida de las comunidades."
     },
     {
-      "title": "La transformación digital y el rol de las herramientas cuantitativas en la gestión pública",
+      "title": "La transformación digital y el rol de las herramientas cuantitativas en la gestión pública moderna",
       "category": "Educación",
       "date": "2026-08-16T14:30:00.000-05:00",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80",
-      "summary": "Cómo la ciencia de datos, la programación y las nuevas tecnologías fortalecen la toma de decisiones en el sector público.",
-      "body": "La modernización de la gestión pública requiere capacidades analíticas sólidas..."
+      "summary": "Cómo la ciencia de datos, la programación y la analítica aplicada permiten diseñar políticas públicas más eficientes y transparentes.",
+      "body": "La formación de los nuevos profesionales de la economía y la gestión pública demanda el dominio de herramientas computacionales y cuantitativas. El uso de análisis de datos y plataformas digitales optimiza la asignación de recursos y permite una fiscalización ciudadana más transparente y accesible para todos."
     },
     {
-      "title": "Memoria viva del Altiplano: El valor de nuestra lengua materna y las tradiciones comunales",
+      "title": "Memoria viva del Altiplano: El valor de nuestra lengua materna y la preservación de la identidad comunal",
       "category": "Cultura",
       "date": "2026-08-16T12:00:00.000-05:00",
       "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&auto=format&fit=crop&q=80",
-      "summary": "Crónica sobre la riqueza cultural, el quechua y las costumbres que mantienen unida la identidad de nuestros pueblos.",
-      "body": "Nuestras raíces representan la mayor fortaleza de identidad y cohesión social..."
+      "summary": "Crónica sobre la riqueza cultural del sur andino, la transmisión oral del quechua y las tradiciones festivas que fortalecen el tejido social.",
+      "body": "Nuestras raíces originarias y tradiciones comunales constituyen la mayor reserva moral y cultural del Altiplano. La preservación de nuestra lengua materna y las prácticas de reciprocidad y trabajo comunitario son pilares indispensables para proyectar nuestro futuro sin perder nuestra identidad histórica."
     }
   ]
 }
