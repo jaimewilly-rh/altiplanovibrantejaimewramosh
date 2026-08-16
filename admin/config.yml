@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: jaimewilly-rh/altiplanovibrantejaimewramosh
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "articulos_editoriales"
+    label: "Artículos y Columnas"
+    files:
+      - file: "content/articulos.json"
+        label: "Lista de Publicaciones del Portal"
+        name: "articulos_lista"
+        fields:
+          - label: "Artículos Publicados"
+            name: "articulos"
+            widget: "list"
+            fields:
+              - {label: "Título del Artículo", name: "title", widget: "string"}
+              - {label: "Categoría", name: "category", widget: "select", options: ["Opinión", "Educación", "Cultura", "Actualidad", "Desarrollo"]}
+              - {label: "Fecha", name: "date", widget: "datetime"}
+              - {label: "Foto / Portada", name: "image", widget: "image", required: false}
+              - {label: "Resumen breve", name: "summary", widget: "text"}
+              - {label: "Contenido completo (Ensayo / Nota)", name: "body", widget: "markdown"}
