@@ -1,0 +1,28 @@
+{
+  "articulos": [
+    {
+      "title": "Inversión pública y eficiencia social en el sur andino: Desafíos para el desarrollo",
+      "category": "Opinión",
+      "date": "2026-08-16T16:00:00.000-05:00",
+      "image": "https://images.unsplash.com/photo-1541888946425-d0fbb186156a?w=800&auto=format&fit=crop&q=80",
+      "summary": "Un análisis sobre la necesidad de articular el ciclo de inversión pública con las demandas estructurales de nuestras provincias y distritos.",
+      "body": "El desarrollo económico del sur andino exige una mirada técnica y socialmente comprometida..."
+    },
+    {
+      "title": "La transformación digital y el rol de las herramientas cuantitativas en la gestión pública",
+      "category": "Educación",
+      "date": "2026-08-16T14:30:00.000-05:00",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80",
+      "summary": "Cómo la ciencia de datos, la programación y las nuevas tecnologías fortalecen la toma de decisiones en el sector público.",
+      "body": "La modernización de la gestión pública requiere capacidades analíticas sólidas..."
+    },
+    {
+      "title": "Memoria viva del Altiplano: El valor de nuestra lengua materna y las tradiciones comunales",
+      "category": "Cultura",
+      "date": "2026-08-16T12:00:00.000-05:00",
+      "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&auto=format&fit=crop&q=80",
+      "summary": "Crónica sobre la riqueza cultural, el quechua y las costumbres que mantienen unida la identidad de nuestros pueblos.",
+      "body": "Nuestras raíces representan la mayor fortaleza de identidad y cohesión social..."
+    }
+  ]
+}
