@@ -3,613 +3,578 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Altiplano Vibrante | Opinión, Realidad, Educación y Cultura</title>
-  <meta name="description" content="Altiplano Vibrante: Espacio editorial de opinión crítica, análisis de la realidad, educación, cultura y tradiciones del sur andino.">
-  
-  <!-- Netlify Identity -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <title>Altiplano Vibrante | Economía, Realidad y Cultura en simple</title>
+  <meta name="description" content="Altiplano Vibrante: Espacio editorial de Jaime Willy Ramos Hualla. Análisis económico, educación, realidad regional y cultura andina.">
 
-  <!-- Fuentes Editoriales -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-light: #f8fafc;
-      --bg-card: #ffffff;
-      --primary-navy: #0f172a;   /* Azul profundo andino */
-      --accent-gold: #d97706;    /* Dorado / Terracota altiplánico */
-      --accent-teal: #0d9488;    /* Verde esmeralda andino */
-      --accent-red: #be123c;     /* Carmesí */
-      --text-main: #1e293b;
+      --bg-site: #f8fafc;
+      --bg-white: #ffffff;
+      --accent-red: #c9182b;       /* Rojo editorial de cabeceras */
+      --accent-dark-red: #9e0e1e;
+      --navy-dark: #0f172a;        /* Azul noche elegante */
+      --text-dark: #1e293b;
+      --text-body: #334155;
       --text-muted: #64748b;
-      --border: #e2e8f0;
-      --white: #ffffff;
-      --font-title: 'Montserrat', sans-serif;
-      --font-serif: 'Lora', Georgia, serif;
+      --border-color: #e2e8f0;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: var(--font-serif);
-      background-color: var(--bg-light);
-      color: var(--text-main);
-      line-height: 1.7;
+      font-family: var(--font-body);
+      background-color: var(--bg-site);
+      color: var(--text-body);
+      line-height: 1.6;
     }
 
-    /* Franja Superior Editorial */
-    .editorial-bar {
-      background: var(--primary-navy);
-      color: #cbd5e1;
-      padding: 0.45rem 1rem;
-      font-family: var(--font-title);
-      font-size: 0.8rem;
-      text-align: center;
-      letter-spacing: 0.5px;
-      border-bottom: 2px solid var(--accent-gold);
-    }
-    .editorial-bar span { color: var(--accent-gold); font-weight: 700; }
-
-    /* Cabecera / Navegación */
-    header {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-container {
-      max-width: 1200px;
+    /* Contenedor centralizado estilo periódico */
+    .site-wrapper {
+      max-width: 1240px;
       margin: auto;
+      background: var(--bg-white);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+      min-height: 100vh;
+      border-left: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+    }
+
+    /* Banner Superior Panorámico */
+    .top-banner {
+      background: linear-gradient(135deg, #091e3a 0%, #10375c 50%, #0d2137 100%);
+      color: #ffffff;
+      padding: 2.2rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.1rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--accent-red);
     }
 
-    .brand-logo {
-      text-decoration: none;
+    .top-banner::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: radial-gradient(circle at 80% 50%, rgba(201, 24, 43, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .banner-brand {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      z-index: 1;
     }
 
-    .brand-title {
-      font-family: var(--font-title);
-      font-size: 1.45rem;
+    .banner-avatar {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-red), #ff758c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
       font-weight: 900;
-      color: var(--primary-navy);
-      letter-spacing: -0.5px;
+      font-size: 1.8rem;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+
+    .banner-text h1 {
+      font-family: var(--font-heading);
+      font-size: 2.3rem;
+      font-weight: 900;
       line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: #ffffff;
     }
 
-    .brand-title span {
-      color: var(--accent-gold);
+    .banner-text h1 span {
+      color: #38bdf8;
     }
 
-    .brand-subtitle {
-      font-family: var(--font-title);
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      letter-spacing: 1px;
+    .banner-slogan {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+
+    .banner-badge {
+      background: var(--accent-red);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
+      z-index: 1;
+      box-shadow: 0 2px 10px rgba(201, 24, 43, 0.4);
+    }
+
+    /* Barra de Navegación */
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
     }
 
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.6rem;
-      align-items: center;
+      gap: 1.8rem;
     }
 
     nav a {
-      font-family: var(--font-title);
-      color: var(--text-main);
-      text-decoration: none;
+      font-family: var(--font-heading);
       font-weight: 700;
       font-size: 0.88rem;
+      color: var(--navy-dark);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       transition: color 0.2s;
     }
 
-    nav a:hover { color: var(--accent-gold); }
-
-    /* Hero / Portada */
-    .hero-editorial {
-      background: linear-gradient(180deg, #f1f5f9 0%, #f8fafc 100%);
-      padding: 5rem 1.5rem 4.5rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
+    nav a:hover {
+      color: var(--accent-red);
     }
 
-    .hero-container {
-      max-width: 860px;
-      margin: auto;
-    }
-
-    .tag-badge {
-      display: inline-block;
-      font-family: var(--font-title);
+    .nav-date {
+      font-family: var(--font-heading);
       font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--accent-gold);
-      background: #fef3c7;
-      padding: 0.35rem 1rem;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-editorial h1 {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--primary-navy);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-editorial p {
-      font-size: 1.2rem;
+      font-weight: 600;
       color: var(--text-muted);
-      margin-bottom: 2rem;
-      font-style: italic;
     }
 
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
+    /* Estructura Editorial de 3 Columnas */
+    .magazine-grid {
+      display: grid;
+      grid-template-columns: 310px 1fr 320px;
+      gap: 2rem;
+      padding: 2.2rem 2rem;
+      border-bottom: 1px solid var(--border-color);
     }
 
-    .btn {
-      font-family: var(--font-title);
-      font-size: 0.9rem;
-      font-weight: 700;
-      padding: 0.8rem 1.8rem;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: all 0.2s;
-      cursor: pointer;
+    /* Encabezados de Columna con Badge Inclinado */
+    .column-header {
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent-red);
+      padding-bottom: 0.4rem;
     }
 
-    .btn-main {
-      background: var(--primary-navy);
-      color: var(--white);
-    }
-    .btn-main:hover { background: #1e293b; transform: translateY(-2px); }
-
-    .btn-gold {
-      background: var(--accent-gold);
-      color: var(--white);
-    }
-    .btn-gold:hover { background: #b45309; transform: translateY(-2px); }
-
-    /* Secciones */
-    section {
-      padding: 4.5rem 1.5rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-alt {
-      background-color: var(--white);
-      max-width: 100%;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-alt-inner {
-      max-width: 1200px;
-      margin: auto;
-      padding: 4.5rem 1.5rem;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-header h2 {
-      font-family: var(--font-serif);
-      font-size: 2.2rem;
-      color: var(--primary-navy);
-      position: relative;
+    .badge-editorial {
       display: inline-block;
-    }
-
-    .section-header h2::after {
-      content: '';
-      display: block;
-      width: 45px;
-      height: 3px;
-      background: var(--accent-gold);
-      margin: 0.6rem auto 0;
-    }
-
-    .section-header p {
-      font-family: var(--font-title);
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 0.5rem;
-    }
-
-    /* Cuadrícula de Artículos */
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 2.2rem;
-    }
-
-    .article-card {
-      background: var(--bg-card);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .article-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
-    }
-
-    .article-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .article-placeholder {
-      height: 220px;
-      background: linear-gradient(135deg, #fef3c7, #e0f2fe);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-title);
-      font-weight: 700;
-      color: var(--primary-navy);
-      font-size: 1.1rem;
-    }
-
-    .article-content {
-      padding: 1.8rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .article-meta {
-      display: flex;
-      justify-content: space-between;
-      font-family: var(--font-title);
-      font-size: 0.78rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-    }
-
-    .cat-tag {
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-    }
-
-    .tag-opinion { color: var(--accent-red); background: #ffe4e6; }
-    .tag-educacion { color: #4338ca; background: #e0e7ff; }
-    .tag-cultura { color: var(--accent-gold); background: #fef3c7; }
-
-    .article-date { color: var(--text-muted); }
-
-    .article-title {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary-navy);
-      margin-bottom: 0.8rem;
-      line-height: 1.35;
-    }
-
-    .article-excerpt {
-      color: var(--text-main);
-      font-size: 0.98rem;
-      margin-bottom: 1.2rem;
-      flex-grow: 1;
-    }
-
-    /* Perfil del Autor */
-    .author-box {
-      background: var(--white);
-      padding: 3rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .author-avatar {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-gold), var(--primary-navy));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-family: var(--font-title);
-      font-size: 3rem;
+      background: var(--accent-red);
+      color: #ffffff;
+      font-family: var(--font-heading);
       font-weight: 900;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
-
-    .author-info h3 {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      color: var(--primary-navy);
-      margin-bottom: 0.4rem;
-    }
-
-    .author-role {
-      font-family: var(--font-title);
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--accent-gold);
-      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.9rem;
+      transform: skew(-10deg);
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
-    .author-info p {
-      color: var(--text-main);
-      font-size: 1.05rem;
+    .badge-editorial span {
+      display: inline-block;
+      transform: skew(10deg);
+    }
+
+    /* Columna Central (Principal) */
+    .main-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .main-card-img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       margin-bottom: 1.2rem;
+    }
+
+    .main-card-tag {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-red);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .main-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      line-height: 1.25;
+      margin-bottom: 0.8rem;
+    }
+
+    .main-card-text {
+      color: var(--text-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .main-card-meta {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Columna Izquierda (Opinión / Ranking) */
+    .side-card-large {
+      margin-bottom: 1.5rem;
+    }
+
+    .side-card-large img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+    }
+
+    .ranking-number {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--accent-red);
+      float: left;
+      margin-right: 0.6rem;
+      line-height: 1;
+    }
+
+    .side-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    .side-card-meta {
+      font-family: var(--font-heading);
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Columna Derecha (Lista Compacta) */
+    .compact-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .compact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .compact-img {
+      width: 95px;
+      height: 85px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .compact-img-placeholder {
+      width: 95px;
+      height: 85px;
+      background: #e2e8f0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .compact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .compact-cat {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent-red);
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .compact-title {
+      font-family: var(--font-heading);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+
+    .compact-meta {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Sección de Autor */
+    .author-section {
+      background: #f1f5f9;
+      padding: 3rem 2rem;
+      margin: 2rem;
+      border-radius: 8px;
+      border-left: 5px solid var(--accent-red);
+    }
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .author-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy-dark), #1e3a8a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 900;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .author-details h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .author-title-badge {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--accent-red);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .author-bio {
+      font-size: 0.98rem;
+      color: var(--text-body);
+      line-height: 1.6;
     }
 
     /* Footer */
     footer {
-      background: var(--primary-navy);
+      background: var(--navy-dark);
       color: #94a3b8;
       text-align: center;
-      padding: 3.5rem 1.5rem;
-      font-family: var(--font-title);
-      font-size: 0.9rem;
+      padding: 2.5rem 2rem;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
     }
 
-    footer a { color: var(--accent-gold); text-decoration: none; font-weight: 700; }
-
-    /* Menú móvil */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--primary-navy);
-      font-size: 1.8rem;
-      cursor: pointer;
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 700;
     }
 
-    @media (max-width: 850px) {
-      .hero-editorial h1 { font-size: 2.2rem; }
-      .author-box { grid-template-columns: 1fr; text-align: center; justify-items: center; }
-      .menu-toggle { display: block; }
-      nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: #ffffff;
-        padding: 1.5rem;
-        border-bottom: 1px solid var(--border);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    /* Responsive */
+    @media (max-width: 980px) {
+      .magazine-grid {
+        grid-template-columns: 1fr;
       }
-      nav ul.active { display: flex; }
+      .top-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+      }
+      .banner-brand {
+        flex-direction: column;
+      }
+      .author-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Franja Editorial -->
-  <div class="editorial-bar">
-    PENSAMIENTO CRÍTICO • IDENTIDAD ANDINA • <span>ALTIPLANO VIBRANTE</span>
-  </div>
+  <div class="site-wrapper">
 
-  <!-- Cabecera -->
-  <header>
-    <div class="nav-container">
-      <a href="#inicio" class="brand-logo">
-        <div class="brand-title">Altiplano <span>Vibrante</span></div>
-        <div class="brand-subtitle">Opinión, Realidad y Cultura</div>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
-      <nav>
-        <ul id="navMenu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#opinion">Opinión y Realidad</a></li>
-          <li><a href="#educacion">Educación y Desarrollo</a></li>
-          <li><a href="#cultura">Cultura y Tradición</a></li>
+    <!-- Banner Panorámico Superior -->
+    <div class="top-banner">
+      <div class="banner-brand">
+        <div class="banner-avatar">JR</div>
+        <div class="banner-text">
+          <h1>Altiplano <span>Vibrante</span></h1>
+          <div class="banner-slogan">Economía, Realidad y Cultura en simple.</div>
+        </div>
+      </div>
+      <div class="banner-badge">Revista Digital • Puno</div>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <nav>
+      <div class="nav-inner">
+        <ul>
+          <li><a href="#portada">Portada</a></li>
+          <li><a href="#opinion">Opinión</a></li>
+          <li><a href="#educacion">Educación</a></li>
+          <li><a href="#cultura">Cultura</a></li>
           <li><a href="#autor">Sobre el Autor</a></li>
-          <li><a href="#contacto">Contacto</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Portada Editorial -->
-  <section class="hero-editorial" id="inicio">
-    <div class="hero-container">
-      <div class="tag-badge">Columna & Revista Digital</div>
-      <h1>Voces, Análisis y Tradiciones del Sur Andino</h1>
-      <p>"Un espacio de reflexión crítica sobre la realidad socioeconómica, el valor de nuestra educación y la riqueza cultural que nos define."</p>
-      
-      <div class="hero-buttons">
-        <a href="#opinion" class="btn btn-main">Leer Artículos de Opinión</a>
-        <a href="#cultura" class="btn btn-gold">Explorar Cultura</a>
+        <div class="nav-date">Domingo, 16 de Agosto de 2026</div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- SECCIÓN 1: OPINIÓN Y REALIDAD -->
-  <section id="opinion">
-    <div class="section-header">
-      <h2>Tribuna de Opinión y Realidad</h2>
-      <p>Análisis de políticas públicas, gestión económica y coyuntura regional</p>
-    </div>
-    <div class="articles-grid" id="contenedorOpinion">
-      <!-- Artículos dinámicos -->
-    </div>
-  </section>
+    <!-- CUADRÍCULA EDITORIAL DE 3 COLUMNAS -->
+    <main class="magazine-grid" id="portada">
 
-  <!-- SECCIÓN 2: EDUCACIÓN Y DESARROLLO -->
-  <div class="section-alt" id="educacion">
-    <div class="section-alt-inner">
-      <div class="section-header">
-        <h2>Educación y Formación</h2>
-        <p>Propuestas para el fortalecimiento académico, innovación y juventud</p>
-      </div>
-      <div class="articles-grid" id="contenedorEducacion">
-        <!-- Artículos dinámicos -->
-      </div>
-    </div>
-  </div>
+      <!-- COLUMNA 1: OPINIÓN Y POLÍTICA PÚBLICA -->
+      <aside>
+        <div class="column-header">
+          <div class="badge-editorial"><span>OPINIÓN</span></div>
+        </div>
 
-  <!-- SECCIÓN 3: CULTURA Y TRADICIONES -->
-  <section id="cultura">
-    <div class="section-header">
-      <h2>Cultura, Costumbres y Tradición</h2>
-      <p>Crónicas vivas, cosmovisión andina e identidad del altiplano</p>
-    </div>
-    <div class="articles-grid" id="contenedorCultura">
-      <!-- Artículos dinámicos -->
-    </div>
-  </section>
+        <article class="side-card-large">
+          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186156a?w=600&auto=format&fit=crop&q=80" alt="Inversión Pública">
+          <span class="ranking-number">1.</span>
+          <h2 class="side-card-title">Inversión pública y eficiencia social en el sur andino: Desafíos estructurales</h2>
+          <div class="side-card-meta">👤 Jaime Willy Ramos • 16 Ago 2026</div>
+        </article>
+      </aside>
 
-  <!-- SECCIÓN 4: SOBRE EL AUTOR -->
-  <div class="section-alt" id="autor">
-    <div class="section-alt-inner">
-      <div class="section-header">
-        <h2>Sobre el Autor</h2>
-        <p>Perfil profesional y visión editorial</p>
-      </div>
-      <div class="author-box">
-        <div class="author-avatar">JR</div>
-        <div class="author-info">
+      <!-- COLUMNA 2: PRINCIPAL / EN PORTADA -->
+      <section>
+        <div class="column-header">
+          <div class="badge-editorial"><span>PRINCIPAL</span></div>
+        </div>
+
+        <article class="main-card">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80" class="main-card-img" alt="Transformación Digital">
+          <div class="main-card-tag">Educación y Gestión Pública</div>
+          <h2 class="main-card-title">La transformación digital y el rol de las herramientas cuantitativas en la gestión moderna</h2>
+          <p class="main-card-text">Cómo la ciencia de datos, la programación en Python y la analítica aplicada permiten optimizar la toma de decisiones y diseñar políticas públicas socialmente eficientes.</p>
+          <div class="main-card-meta">👤 Jaime Willy Ramos Hualla • 16 de Agosto de 2026</div>
+        </article>
+      </section>
+
+      <!-- COLUMNA 3: NOVEDADES Y CULTURA -->
+      <aside>
+        <div class="column-header">
+          <div class="badge-editorial"><span>NOVEDADES</span></div>
+        </div>
+
+        <div id="contenedorNovedades">
+          <!-- Artículo 1 -->
+          <article class="compact-item">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=300&auto=format&fit=crop&q=80" class="compact-img" alt="Cultura">
+            <div class="compact-info">
+              <span class="compact-cat">Cultura</span>
+              <h3 class="compact-title">Memoria viva: El valor de nuestra lengua materna</h3>
+              <div class="compact-meta">16 Ago 2026</div>
+            </div>
+          </article>
+
+          <!-- Artículo 2 -->
+          <article class="compact-item">
+            <div class="compact-img-placeholder">📊</div>
+            <div class="compact-info">
+              <span class="compact-cat">Economía</span>
+              <h3 class="compact-title">Seguimiento de proyectos y cierre de brechas</h3>
+              <div class="compact-meta">16 Ago 2026</div>
+            </div>
+          </article>
+
+          <!-- Artículo 3 -->
+          <article class="compact-item">
+            <div class="compact-img-placeholder">🏛️</div>
+            <div class="compact-info">
+              <span class="compact-cat">Región</span>
+              <h3 class="compact-title">Desarrollo territorial en provincias y distritos</h3>
+              <div class="compact-meta">16 Ago 2026</div>
+            </div>
+          </article>
+        </div>
+      </aside>
+
+    </main>
+
+    <!-- SECCIÓN: SOBRE EL AUTOR -->
+    <section class="author-section" id="autor">
+      <div class="author-grid">
+        <div class="author-pic">JR</div>
+        <div class="author-details">
           <h3>Jaime Willy Ramos Hualla</h3>
-          <div class="author-role">Economista • Investigador</div>
-          <p>Especialista en regulación, finanzas públicas y proyectos de inversión socialmente eficientes. Este portal es un espacio de análisis y reflexión crítica sobre la realidad socioeconómica, la educación y la riqueza cultural de nuestras comunidades andinas.</p>
-          <a href="#contacto" class="btn btn-main" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Escribir al Autor</a>
+          <div class="author-title-badge">Ingeniero Economista • Investigador</div>
+          <p class="author-bio">Especialista en regulación, finanzas públicas y formulación de proyectos de inversión socialmente eficientes. Este portal es un espacio de análisis y reflexión crítica sobre la realidad socioeconómica, la educación y la riqueza cultural de nuestras comunidades andinas.</p>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Altiplano Vibrante. Director y Editor: Jaime Willy Ramos Hualla.</p>
+      <p style="margin-top: 0.5rem;"><a href="/admin/">Acceso al Panel Editorial</a></p>
+    </footer>
+
   </div>
-
-  <!-- SECCIÓN CONTACTO -->
-  <section id="contacto">
-    <div class="section-header">
-      <h2>Diálogo y Contacto</h2>
-      <p>Canales abiertos para consultas académicas, comentarios y colaboraciones</p>
-    </div>
-    <div style="text-align: center; max-width: 600px; margin: auto;">
-      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Siga las publicaciones a través de la página oficial o envíe sus comentarios directamente:</p>
-      <a href="https://www.facebook.com" target="_blank" class="btn btn-main" style="margin-right: 0.5rem;">Página de Facebook</a>
-      <a href="mailto:jaimewrh821@gmail.com" class="btn btn-gold">Enviar Correo</a>
-    </div>
-  </section>
-
-  <!-- Pie de página -->
-  <footer>
-    <p>&copy; 2026 Altiplano Vibrante. Director y Editor: Jaime Willy Ramos Hualla.</p>
-    <p style="margin-top: 0.8rem;"><a href="/admin/">Acceso al Panel Editorial</a></p>
-  </footer>
-
-  <!-- Lector automático de artículos desde content/articulos.json -->
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-
-    function crearCardEditorial(item, tagClass) {
-      const card = document.createElement('article');
-      card.className = 'article-card';
-      
-      let imgHtml = '';
-      if (item.image) {
-        imgHtml = `<img src="${item.image}" referrerpolicy="no-referrer" alt="${item.title}">`;
-      } else {
-        imgHtml = `<div class="article-placeholder">Altiplano Vibrante</div>`;
-      }
-
-      const fecha = item.date ? new Date(item.date).toLocaleDateString('es-PE', { day: '2-digit', month: 'long', year: 'numeric' }) : '';
-
-      card.innerHTML = `
-        ${imgHtml}
-        <div class="article-content">
-          <div class="article-meta">
-            <span class="cat-tag ${tagClass}">${item.category || 'Opinión'}</span>
-            <span class="article-date">${fecha}</span>
-          </div>
-          <h3 class="article-title">${item.title}</h3>
-          <p class="article-excerpt">${item.summary || ''}</p>
-        </div>
-      `;
-      return card;
-    }
-
-    fetch('content/articulos.json')
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.articulos && data.articulos.length > 0) {
-          const cOp = document.getElementById('contenedorOpinion');
-          const cEd = document.getElementById('contenedorEducacion');
-          const cCu = document.getElementById('contenedorCultura');
-
-          cOp.innerHTML = '';
-          cEd.innerHTML = '';
-          cCu.innerHTML = '';
-
-          const lista = [...data.articulos].sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
-
-          lista.forEach(item => {
-            const cat = (item.category || '').toLowerCase();
-            if (cat.includes('educa') || cat.includes('formaci')) {
-              cEd.appendChild(crearCardEditorial(item, 'tag-educacion'));
-            } else if (cat.includes('cultur') || cat.includes('tradici') || cat.includes('costumbr')) {
-              cCu.appendChild(crearCardEditorial(item, 'tag-cultura'));
-            } else {
-              cOp.appendChild(crearCardEditorial(item, 'tag-opinion'));
-            }
-          });
-
-          if (cOp.children.length === 0) {
-            cOp.innerHTML = `<article class="article-card"><div class="article-placeholder">Columna de Opinión</div><div class="article-content"><span class="cat-tag tag-opinion">Opinión</span><h3 class="article-title">Inversión pública y eficiencia social en el sur andino</h3><p class="article-excerpt">Reflexiones sobre la necesidad de articular el ciclo de inversión pública con las demandas reales de nuestras comunidades.</p></div></article>`;
-          }
-          if (cEd.children.length === 0) {
-            cEd.innerHTML = `<article class="article-card"><div class="article-placeholder">Educación y Futuro</div><div class="article-content"><span class="cat-tag tag-educacion">Educación</span><h3 class="article-title">La formación técnica y universitaria frente a los desafíos regionales</h3><p class="article-excerpt">El rol de las herramientas cuantitativas y la transformación digital en la formación de los nuevos profesionales.</p></div></article>`;
-          }
-          if (cCu.children.length === 0) {
-            cCu.innerHTML = `<article class="article-placeholder">Identidad Viva</div><div class="article-content"><span class="cat-tag tag-cultura">Cultura</span><h3 class="article-title">El valor de nuestra lengua materna y las raíces del altiplano</h3><p class="article-excerpt">Crónica sobre la preservación de nuestras tradiciones y la memoria viva de nuestros pueblos.</p></div></article>`;
-          }
-        }
-      })
-      .catch(e => console.log('Cargando artículos...', e));
-
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) window.netlifyIdentity.on("login", () => document.location.href = "/admin/");
-      });
-    }
-  </script>
 
 </body>
 </html>
